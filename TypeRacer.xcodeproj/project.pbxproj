@@ -13,6 +13,8 @@
 		3CDA6EE82537701C00128A85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDA6EE62537701C00128A85 /* Main.storyboard */; };
 		3CDA6EEA2537701D00128A85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDA6EE92537701D00128A85 /* Assets.xcassets */; };
 		3CDA6EED2537701D00128A85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDA6EEB2537701D00128A85 /* LaunchScreen.storyboard */; };
+		3CDA6EFE253775B900128A85 /* TypeRacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA6EFD253775B900128A85 /* TypeRacer.swift */; };
+		3CDA6F032537766100128A85 /* TypeRacerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA6F022537766100128A85 /* TypeRacerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		3CDA6EE92537701D00128A85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CDA6EEC2537701D00128A85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CDA6EEE2537701D00128A85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CDA6EFD253775B900128A85 /* TypeRacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeRacer.swift; sourceTree = "<group>"; };
+		3CDA6F022537766100128A85 /* TypeRacerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeRacerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,73 @@
 		3CDA6EDF2537701C00128A85 /* TypeRacer */ = {
 			isa = PBXGroup;
 			children = (
+				3CDA6EFA2537752D00128A85 /* Models */,
+				3CDA6EF92537752200128A85 /* Views */,
+				3CDA6EF72537751900128A85 /* Controllers */,
+				3CDA6EF62537751300128A85 /* Resources */,
+			);
+			path = TypeRacer;
+			sourceTree = "<group>";
+		};
+		3CDA6EF62537751300128A85 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				3CDA6EE02537701C00128A85 /* AppDelegate.swift */,
 				3CDA6EE22537701C00128A85 /* SceneDelegate.swift */,
-				3CDA6EE42537701C00128A85 /* ViewController.swift */,
-				3CDA6EE62537701C00128A85 /* Main.storyboard */,
 				3CDA6EE92537701D00128A85 /* Assets.xcassets */,
 				3CDA6EEB2537701D00128A85 /* LaunchScreen.storyboard */,
 				3CDA6EEE2537701D00128A85 /* Info.plist */,
 			);
-			path = TypeRacer;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3CDA6EF72537751900128A85 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3CDA6F012537764E00128A85 /* ModelControllers */,
+				3CDA6EF82537751D00128A85 /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3CDA6EF82537751D00128A85 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3CDA6EE42537701C00128A85 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3CDA6EF92537752200128A85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3CDA6EFB2537757900128A85 /* Storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3CDA6EFA2537752D00128A85 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3CDA6EFD253775B900128A85 /* TypeRacer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3CDA6EFB2537757900128A85 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3CDA6EE62537701C00128A85 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		3CDA6F012537764E00128A85 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3CDA6F022537766100128A85 /* TypeRacerController.swift */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +200,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CDA6EE52537701C00128A85 /* ViewController.swift in Sources */,
+				3CDA6EFE253775B900128A85 /* TypeRacer.swift in Sources */,
 				3CDA6EE12537701C00128A85 /* AppDelegate.swift in Sources */,
 				3CDA6EE32537701C00128A85 /* SceneDelegate.swift in Sources */,
+				3CDA6F032537766100128A85 /* TypeRacerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
