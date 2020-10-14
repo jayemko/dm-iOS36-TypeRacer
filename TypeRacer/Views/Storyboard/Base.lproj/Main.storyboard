@@ -155,6 +155,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Hq-qN-5lC"/>
+                    <connections>
+                        <outlet property="clockLabel" destination="sm3-vr-OWF" id="hlu-Oj-Kpd"/>
+                        <outlet property="paragraphLabel" destination="E3G-XF-UDf" id="jsN-ek-Lq3"/>
+                        <outlet property="quitButton" destination="Y9C-Bs-xTS" id="RCs-Em-GMv"/>
+                        <outlet property="resetButton" destination="QYB-Jt-uzr" id="idQ-6h-EAL"/>
+                        <outlet property="typeEntryTextField" destination="hWD-sD-61Q" id="SAa-7D-8dd"/>
+                        <outlet property="wordsPerMinuteLabel" destination="ESx-S6-NSS" id="Dnb-Ws-gwB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
