@@ -15,6 +15,7 @@
 		3CDA6EED2537701D00128A85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDA6EEB2537701D00128A85 /* LaunchScreen.storyboard */; };
 		3CDA6EFE253775B900128A85 /* TypeRacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA6EFD253775B900128A85 /* TypeRacer.swift */; };
 		3CDA6F032537766100128A85 /* TypeRacerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA6F022537766100128A85 /* TypeRacerController.swift */; };
+		3CDA6F0C2537970400128A85 /* Paragraphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA6F0B2537970300128A85 /* Paragraphs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3CDA6EEE2537701D00128A85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CDA6EFD253775B900128A85 /* TypeRacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeRacer.swift; sourceTree = "<group>"; };
 		3CDA6F022537766100128A85 /* TypeRacerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeRacerController.swift; sourceTree = "<group>"; };
+		3CDA6F0B2537970300128A85 /* Paragraphs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paragraphs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		3CDA6EF62537751300128A85 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3CDA6F0B2537970300128A85 /* Paragraphs.swift */,
 				3CDA6EE02537701C00128A85 /* AppDelegate.swift */,
 				3CDA6EE22537701C00128A85 /* SceneDelegate.swift */,
 				3CDA6EE92537701D00128A85 /* Assets.xcassets */,
@@ -201,6 +204,7 @@
 			files = (
 				3CDA6EE52537701C00128A85 /* ViewController.swift in Sources */,
 				3CDA6EFE253775B900128A85 /* TypeRacer.swift in Sources */,
+				3CDA6F0C2537970400128A85 /* Paragraphs.swift in Sources */,
 				3CDA6EE12537701C00128A85 /* AppDelegate.swift in Sources */,
 				3CDA6EE32537701C00128A85 /* SceneDelegate.swift in Sources */,
 				3CDA6F032537766100128A85 /* TypeRacerController.swift in Sources */,
