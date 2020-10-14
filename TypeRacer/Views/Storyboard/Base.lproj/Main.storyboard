@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="oUC-Yn-Tyv">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="XIS-qt-oVA" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="XIS-qt-oVA" customClass="StartViewController" customModule="TypeRacer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Rq-uw-nEf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,6 +49,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="D2b-B4-vva"/>
+                    <connections>
+                        <outlet property="startButton" destination="sLl-d4-jFJ" id="PGX-2j-rrI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXa-YM-mdM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
