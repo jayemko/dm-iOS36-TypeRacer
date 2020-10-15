@@ -17,14 +17,7 @@ class StartViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    // MARK: - Actions
-    
-    // touch up inside
-    @IBAction func startButtonTapped(_ sender: UIButton) {
-        // start new game
-    }
-    
+
     // MARK: - Helpers
     
     func createNewGame() -> TypeRacer {
