@@ -17,6 +17,7 @@
 		3CDA6F032537766100128A85 /* TypeRacerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA6F022537766100128A85 /* TypeRacerController.swift */; };
 		3CDA6F0C2537970400128A85 /* Paragraphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA6F0B2537970300128A85 /* Paragraphs.swift */; };
 		3CDA6F132537B28700128A85 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA6F122537B28700128A85 /* StartViewController.swift */; };
+		5A617175253906AE00789B5F /* license.md in Resources */ = {isa = PBXBuildFile; fileRef = 5A617174253906AE00789B5F /* license.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3CDA6F022537766100128A85 /* TypeRacerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeRacerController.swift; sourceTree = "<group>"; };
 		3CDA6F0B2537970300128A85 /* Paragraphs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paragraphs.swift; sourceTree = "<group>"; };
 		3CDA6F122537B28700128A85 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		5A617174253906AE00789B5F /* license.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = license.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				3CDA6EE92537701D00128A85 /* Assets.xcassets */,
 				3CDA6EEB2537701D00128A85 /* LaunchScreen.storyboard */,
 				3CDA6EEE2537701D00128A85 /* Info.plist */,
+				5A617174253906AE00789B5F /* license.md */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A617175253906AE00789B5F /* license.md in Resources */,
 				3CDA6EED2537701D00128A85 /* LaunchScreen.storyboard in Resources */,
 				3CDA6EEA2537701D00128A85 /* Assets.xcassets in Resources */,
 				3CDA6EE82537701C00128A85 /* Main.storyboard in Resources */,
