@@ -56,14 +56,11 @@ class ViewController: UIViewController {
         timeEnded = nil
         resetButton.isHidden = true
         updateViewsForGame()
-        print("[\(#fileID):\(#function):\(#line)] -- timeStarted: \(timeStarted)")
-        print("[\(#fileID):\(#function):\(#line)] -- timeEnded: \(timeEnded)")
     }
     
     @IBAction func textFieldEditingDidEnd(_ sender: UITextField) {
         checkText()
         completeGame()
-        print("[\(#fileID):\(#function):\(#line)] -- timeEnded: \(timeEnded)")
     }
 
     // MARK: - Helpers
@@ -94,13 +91,14 @@ class ViewController: UIViewController {
         }
         
         if let timeCompleted = currentGame.timeCompleted {
+            print("===== debug =====\n[\(#fileID):\(#function):\(#line)]\n================")
             resetButton.isHidden = false
             resetButton.setTitle("Play Again?", for: .normal)
         }
-        if let timeEnded = timeEnded {
-            resetButton.isHidden = false
-            resetButton.setTitle("Play Again?", for: .normal)
-        }
+//        if let timeEnded = timeEnded {
+//            resetButton.isHidden = false
+//            resetButton.setTitle("Play Again?", for: .normal)
+//        }
         if timeStarted != nil && timeEnded == nil {
             resetButton.isHidden = true
         }
@@ -114,7 +112,6 @@ class ViewController: UIViewController {
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
-        print("[\(#fileID):\(#function):\(#line)] -- \(textField.text)")
         checkText()
     }
     
