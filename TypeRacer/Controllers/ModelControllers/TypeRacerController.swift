@@ -23,7 +23,9 @@ class TypeRacerController {
         let timeCompleted = timeEnded.timeIntervalSince(timeStarted)
         
         let words = typeRacer.paragraph.components(separatedBy: " ")
-        let wpm = words.count / (Int(timeCompleted) / 60)
+        let wordCount = Double(words.count)
+        
+        let wpm = Int(wordCount / (timeCompleted / 60))
         
         typeRacer.wpm = wpm
     }
