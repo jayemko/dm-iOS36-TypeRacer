@@ -21,6 +21,7 @@ class TypeRacerController {
     
     static func completeTypeRacer(typeRacer: TypeRacer, timeStarted: Date, timeEnded: Date) {
         let timeCompleted = timeEnded.timeIntervalSince(timeStarted)
+        typeRacer.timeCompleted = timeCompleted
         
         let words = typeRacer.paragraph.components(separatedBy: " ")
         let wordCount = Double(words.count)
