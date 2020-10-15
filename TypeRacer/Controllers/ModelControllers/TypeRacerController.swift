@@ -15,8 +15,8 @@ enum TypeRacerStatus {
 
 class TypeRacerController {
     
-    static func createTypeRacer(paragraph: String, username: String, timeCompleted: TimeInterval? = nil, wpm: Int? = nil) -> TypeRacer {
-        return TypeRacer(paragraph: paragraph, username: username, timeCompleted: timeCompleted, wpm: wpm)
+    static func createTypeRacer(paragraph: String = Paragraphs.textPrompts.randomElement() ?? "", timeCompleted: TimeInterval? = nil, wpm: Int? = nil) -> TypeRacer {
+        return TypeRacer(paragraph: paragraph, timeCompleted: timeCompleted, wpm: wpm)
     }
     
     static func completeTypeRacer(typeRacer: TypeRacer, timeCompleted: TimeInterval) {
