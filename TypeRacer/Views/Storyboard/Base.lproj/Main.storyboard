@@ -115,6 +115,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="Gm8-zn-Ga0"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <state key="normal" title="Play Again">
                                     <color key="titleColor" red="0.96862745100000003" green="0.94901960780000005" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -122,6 +123,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9C-Bs-xTS">
                                 <rect key="frame" x="79" y="642.5" width="257" height="30"/>
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.75686274509999996" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Quit">
                                     <color key="titleColor" red="0.96862745100000003" green="0.94901960780000005" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
