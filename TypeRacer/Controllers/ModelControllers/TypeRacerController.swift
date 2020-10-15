@@ -7,6 +7,12 @@
 
 import Foundation
 
+enum TypeRacerStatus {
+    case typo
+    case noErrors
+    case complete
+}
+
 class TypeRacerController {
     
     static func createTypeRacer(paragraph: String, username: String, timeCompleted: TimeInterval? = nil, wpm: Int? = nil) -> TypeRacer {
@@ -20,6 +26,18 @@ class TypeRacerController {
         let wpm = words.count / (Int(timeCompleted) / 60)
         
         typeRacer.wpm = wpm
+    }
+    
+    static func checkText(text: String, typeRacer: TypeRacer) -> TypeRacerStatus {
+        let paragraph = typeRacer.paragraph
+        
+        if paragraph == text {
+            return .complete
+        } else if paragraph.contains(text) {
+            return .noErrors
+        } else {
+            return .typo
+        }
     }
     
 }
