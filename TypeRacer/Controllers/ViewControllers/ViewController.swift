@@ -40,31 +40,44 @@ class ViewController: UIViewController {
             resetButton.isHidden = true
         }
         // Play Again?
-        if game?.timeCompleted != nil {
+//        if game?.timeCompleted != nil {
+        if timeEnded != nil {
             createNewGame()
         }
     }
     
     @IBAction func quitButtonTapped(_ sender: UIButton) {
         completeGame()
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func textFieldEditingDidBegin(_ sender: UITextField) {
         timeStarted = Date()
+        timeEnded = nil
+        resetButton.isHidden = true
         updateViewsForGame()
+        print("[\(#fileID):\(#function):\(#line)] -- timeStarted: \(timeStarted)")
+        print("[\(#fileID):\(#function):\(#line)] -- timeEnded: \(timeEnded)")
     }
     
     @IBAction func textFieldEditingDidEnd(_ sender: UITextField) {
         checkText()
         completeGame()
+        print("[\(#fileID):\(#function):\(#line)] -- timeEnded: \(timeEnded)")
     }
 
     // MARK: - Helpers
 
     func setupViewsForGame() {
+        typeEntryTextField.autocorrectionType = .no
+        typeEntryTextField.spellCheckingType = .no
+        typeEntryTextField.autocapitalizationType = .none
+        typeEntryTextField.isUserInteractionEnabled = true
+        
+        
         if let game = game {
             paragraphLabel.text = game.paragraph
-            clockLabel.text = "00:00"
+            clockLabel.text = ""
             typeEntryTextField.text = ""
             wordsPerMinuteLabel.text = "wpm"
             resetButton.isHidden = false
@@ -75,16 +88,16 @@ class ViewController: UIViewController {
     
     func updateViewsForGame() {
         guard let currentGame = game else { return }
-        if let enteredText = typeEntryTextField.text {
-            checkText()
-        }
         
         if let wordsPerMinute = currentGame.wpm {
             wordsPerMinuteLabel.text = "\(wordsPerMinute) wpm"
         }
         
         if let timeCompleted = currentGame.timeCompleted {
-            clockLabel.text = "\(timeCompleted)" // TODO FORMAT
+            resetButton.isHidden = false
+            resetButton.setTitle("Play Again?", for: .normal)
+        }
+        if let timeEnded = timeEnded {
             resetButton.isHidden = false
             resetButton.setTitle("Play Again?", for: .normal)
         }
@@ -102,7 +115,7 @@ class ViewController: UIViewController {
     
     @objc func textFieldDidChange(_ textField: UITextField) {
         print("[\(#fileID):\(#function):\(#line)] -- \(textField.text)")
-//        checkText()
+        checkText()
     }
     
     func checkText() {
@@ -116,12 +129,21 @@ class ViewController: UIViewController {
                 typeEntryTextField.textColor = .darkGray
             case .complete:
                 typeEntryTextField.textColor = .green
+                completeGame()
         }
     }
     
     func completeGame() {
         timeEnded = Date()
-        TypeRacerController.completeTypeRacer(typeRacer: game, timeStarted: timeStarted, timeEnded: timeEnded)
+        typeEntryTextField.resignFirstResponder()
+        typeEntryTextField.isUserInteractionEnabled = false
+        
+        guard let currentGame = game,
+              let currentGameTimeStarted = timeStarted,
+              let currectGameTimeEnded = timeEnded else { return }
+        
+        TypeRacerController.completeTypeRacer(typeRacer: currentGame, timeStarted: currentGameTimeStarted, timeEnded: currectGameTimeEnded)
+        print("[\(#fileID):\(#function): \(#line)] -- Completed!")
         updateViewsForGame()
     }
 }
