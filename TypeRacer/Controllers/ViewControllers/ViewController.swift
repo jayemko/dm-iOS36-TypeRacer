@@ -20,13 +20,26 @@ class ViewController: UIViewController {
     
     // MARK: - Properties
     
+    var game: TypeRacer?
+    
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupViewsForGame()
     }
     
     // MARK: - Helpers
 
+    func setupViewsForGame() {
+        if let game = game {
+            paragraphLabel.text = game.paragraph
+            clockLabel.text = "00:00"
+            typeEntryTextField.text = ""
+            resetButton.isHidden = false
+            resetButton.setTitle("Go!", for: .normal)
+        }
+    }
 }
 
