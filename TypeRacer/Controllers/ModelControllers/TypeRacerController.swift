@@ -19,8 +19,8 @@ class TypeRacerController {
         return TypeRacer(paragraph: paragraph, timeCompleted: timeCompleted, wpm: wpm)
     }
     
-    static func completeTypeRacer(typeRacer: TypeRacer, timeCompleted: TimeInterval) {
-        typeRacer.timeCompleted = timeCompleted
+    static func completeTypeRacer(typeRacer: TypeRacer, timeStarted: Date, timeEnded: Date) {
+        let timeCompleted = timeEnded.timeIntervalSince(timeStarted)
         
         let words = typeRacer.paragraph.components(separatedBy: " ")
         let wpm = words.count / (Int(timeCompleted) / 60)
